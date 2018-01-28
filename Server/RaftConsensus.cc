@@ -1394,9 +1394,9 @@ RaftConsensus::handleAppendEntries(
                       "and there's not a good way forward. There's some hope "
                       "that if this server reboots, it'll come back up with a "
                       "newer version of the code that understands the entry.",
+                      leaderId,
                       index,
-                      entry.term(),
-                      leaderId);
+                      entry.term());
             }
             entries.push_back(&entry);
             ++it;
